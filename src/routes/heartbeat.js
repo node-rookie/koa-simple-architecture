@@ -1,5 +1,6 @@
+var router = require('koa-route');
 module.exports = function(app){
-    app.use('/heartbeat', function(req, res){
-        res.status(200).end();
-    });
+    app.use(router.get('/heartbeat', function *(){
+        this.status = 200;
+    }));
 };
