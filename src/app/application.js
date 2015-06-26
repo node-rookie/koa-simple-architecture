@@ -13,7 +13,7 @@ require('../routes')(app);
 
 //404
 app.use(function *pageNotFound(next) {
-    this.body = yield render('404');
+    this.response.body = yield render('404');
 });
 
 //error

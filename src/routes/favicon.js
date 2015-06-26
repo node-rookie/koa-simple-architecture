@@ -10,6 +10,6 @@ module.exports = function(app){
         var icon = yield read(path.join(__dirname, '../../public/favicon.ico'));
         this.set('Cache-Control', 'max-age = 3600');
         this.type = 'image/x-icon';
-        this.body = icon;
+        this.response.body = icon;
     })
 };
